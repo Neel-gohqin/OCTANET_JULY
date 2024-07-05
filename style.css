@@ -88,7 +88,8 @@ main {
 .navlist a:active {
     color: black;
 }
-.navlist img{
+
+.navlist img {
     color: black;
     width: 4vw;
     height: 2.5vh;
@@ -184,34 +185,6 @@ header strong {
 
 }
 
-
-.descpdt {
-    width: 100%;
-    height: auto;
-    position: relative;
-    top: 52%;
-}
-
-.descpdt h2 {
-    font-family: var(--default-font);
-    font-size: 0.9rem;
-    font-weight: 420;
-    padding-bottom: 8px;
-}
-
-.descpdt p {
-    font-size: 0.8rem;
-    font-weight: 380;
-    font-family: var(--default-font);
-}
-
-.descpdt p:nth-child(3) {
-    font-size: 0.9rem;
-    font-family: var(--default-font);
-    font-weight: 400;
-}
-
-
 /* .nvaExpnd{
     width: 8vw;
     height:6vh;
@@ -228,12 +201,18 @@ header strong {
     height:50vh;
     } */
 
+.prdtctsec {
+    width: 100%;
+    height: auto;
+
+}
+
 
 .midsecc {
     width: 100%;
     height: auto;
     transition: background-blend-mode 0.4s ease-in;
-}   
+}
 
 .BoxGird {
     width: 100%;
@@ -261,11 +240,9 @@ header strong {
 
 }
 
-
-
 .imgbox1 {
     grid-column: 1/3;
-    background-image: url(assets/food6.jpg);
+    background-image: url(assets/bread-6889039_1280.jpg);
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -295,12 +272,6 @@ header strong {
 }
 
 
-.prdtctsec {
-    width: 100%;
-    height: auto;
-
-}
-
 .expbox {
     display: flex;
     justify-content: center;
@@ -320,13 +291,17 @@ header strong {
     height: 0px;
 
 }
-.lowersec{
+
+
+.lowersec {
     width: 100%;
     height: auto;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
-.lowersec p ,.midsecc p {
-    padding: 8px 8px;
+
+.lowersec p,
+.midsecc p {
+    padding: 5px 8px 0px 8px;
     text-align: center;
     width: auto;
     height: auto;
@@ -377,9 +352,9 @@ header strong {
 }
 
 .Lowpdtbx .ptBx {
-    transform: translate(50%, 12%);
-    width: 21vw;
-    height: 10vh;
+    transform: translate(50%, 21%);
+    width: 20vw;
+    height: 9vh;
     outline: none;
     position: absolute;
     border-radius: 50%;
@@ -447,28 +422,64 @@ header strong {
 }
 
 
+.descpdt {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 55%;
+
+}
+
+.descpdt h2 {
+    font-family: var(--default-font);
+    font-size: 0.9rem;
+    font-weight: 420;
+    line-height: 21px;
+}
+
+.descpdt p {
+    font-size: 0.8rem;
+    font-weight: 380;
+    font-family: var(--default-font);
+}
+
+.descpdt p:nth-child(3) {
+    font-size: 0.9rem;
+    font-family: var(--default-font);
+    font-weight: 420;
+    color: #c99f88;
+    transform: translateY(-3px);
+}
+
 
 /* LOWER */
-.infosec{
+.infosec {
     width: 100%;
-    height: 14vh;
+    height: 13vh;
     display: flex;
     justify-content: center;
-    padding: 0px 10px;
-    align-items: center;
-    background: linear-gradient(to bottom, #ffffff 30%, #fee0d0 80%);
+    padding: 10px 10px 0px 10px;
 }
-.infosec .seclowlf{
+
+.infosec .seclowlf {
     font-size: 0.8rem;
     width: 50%;
+    height: auto;
 }
-.seclowlf .connetion{
-   display: flex;
-   flex-direction: column;
-   gap:4px;
-   padding: 5px 0px 6px 0px;
+
+.infosec h2,
+.seclowrght h2 {
+    font-size: 1rem;
 }
-.connetion a{
+
+.seclowlf .connetion {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 7px 0px 6px 0px;
+}
+
+.connetion a {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -477,16 +488,64 @@ header strong {
     font-family: var(--default-font);
     font-size: 0.6rem;
 }
-.connetion p{
+
+.connetion p {
     display: inline-block;
     justify-content: center;
     align-items: center;
 }
-.seclowlf img{
-    width: 26px;
-    height: 26px;
+
+.seclowlf img {
+    width: 20px;
+    height: 20px;
 }
-.infosec .seclowrght{
+
+.infosec .seclowrght {
     width: 50%;
     height: auto;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.seclowrght .otlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 7px;
+}
+
+.seclowrght p {
+    text-decoration: none;
+    color: black;
+    font-family: var(--default-font);
+    font-size: 0.6rem;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to bottom, #f4f4f4 5%, #fee0d0 90%);
+    backdrop-filter: blur(2px);
+}
+
+footer .dts {
+    padding: 5px 10px;
+    width: 100%;
+    height: auto;
+}
+
+footer .dts>h2 {
+    font-family: var(--default-font);
+    font-size: 0.7rem;
+    font-weight: 405;
+    padding: 3px 0px;
+}
+
+footer .dts>p {
+    font-weight: 400;
+    font-family: var(--default-font);
+    font-size: 0.6rem;
 }
