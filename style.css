@@ -324,35 +324,46 @@ header strong {
     justify-items: center;
     align-items: center;
     padding-top: 20px;
-
 }
 
 .Lowpdtbx a {
     text-decoration: none;
     color: black;
     text-align: center;
+    border-radius: 12px;
+}
+
+.Lowpdtbx .wishlist {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    padding-left: 5px;
+    z-index: 2;
+}
+
+.Lowpdtbx .wishlist img {
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    transition: transform 0.2s ease;
+}
+
+.wishlist img:hover {
+    transform: scale(1.1);
 }
 
 .Lowpdtbx .pdtoubx {
-    padding-top: 20px;
+    padding: 6px 0px;
     border-radius: 12px;
     width: 42vw;
     height: 25vh;
-    background: linear-gradient(rgb(250, 250, 250), rgb(255, 245, 245));
+    background: linear-gradient(rgb(243, 242, 242), rgb(250, 238, 238));
     backdrop-filter: blur(1.5px);
-
 }
 
-.pdtoubx:hover .ptBx,
-.pdtoubx:active .ptBx {
-
-    background-blend-mode: normal;
-    opacity: 100%;
-    transition: background-blend-mode 0.4s ease-in, opacity 0.3s ease-in;
-}
 
 .Lowpdtbx .ptBx {
-    transform: translate(50%, 21%);
+    transform: translate(50%, 15%);
     width: 20vw;
     height: 9vh;
     outline: none;
@@ -360,8 +371,17 @@ header strong {
     border-radius: 50%;
     background-color: black;
     background-blend-mode: hard-light;
-    opacity: 85%;
+    opacity: 90%;
 
+}
+
+.pdtoubx:hover .ptBx,
+.pdtoubx:active .ptBx {
+
+    background-blend-mode: normal;
+    transition: background-blend-mode 3s ease, opacity 0.3s ease;
+    ;
+    opacity: 100%;
 }
 
 .ptBx1 {
@@ -372,7 +392,6 @@ header strong {
     outline: none;
     object-fit: cover;
     overflow: hidden;
-
 }
 
 .ptBx2 {
@@ -391,6 +410,8 @@ header strong {
     object-fit: cover;
     outline: none;
     overflow: hidden;
+    background-repeat: no-repeat;
+
 }
 
 .ptBx4 {
@@ -426,7 +447,7 @@ header strong {
     width: 100%;
     height: auto;
     position: absolute;
-    top: 55%;
+    bottom: 4%;
 
 }
 
@@ -434,17 +455,17 @@ header strong {
     font-family: var(--default-font);
     font-size: 0.9rem;
     font-weight: 420;
-    line-height: 21px;
+    line-height: 20px;
 }
 
 .descpdt p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 380;
     font-family: var(--default-font);
 }
 
 .descpdt p:nth-child(3) {
-    font-size: 0.9rem;
+    font-size: 0.848rem;
     font-family: var(--default-font);
     font-weight: 420;
     color: #c99f88;
@@ -513,7 +534,7 @@ header strong {
 .seclowrght .otlinks {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 4px;
     padding-top: 7px;
 }
 
@@ -532,7 +553,7 @@ footer {
 }
 
 footer .dts {
-    padding: 5px 10px;
+    padding: 8px 10px;
     width: 100%;
     height: auto;
 }
