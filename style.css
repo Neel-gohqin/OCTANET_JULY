@@ -74,6 +74,7 @@ main {
 
 .navlist li:hover {
     transform: translateY(-3px);
+    color: #df824d;
 }
 
 .navlist a {
@@ -112,13 +113,13 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 50px 0px 65px 0px;
+    margin: 10px 0px 45px 0px;
 }
 
 header img {
     width: 180px;
     height: 180px;
-    transform: scale(20%);
+    transform: scale(25%);
     z-index: -1;
     animation: scaleLogo 0.3s 1 linear normal forwards;
 }
@@ -138,16 +139,15 @@ header img {
 header>h1 {
     width: 100%;
     height: auto;
-    text-align: left;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     line-height: 3.6rem;
     font-weight: 500;
     font-family: var(--default-font);
     color: rgb(74, 48, 13);
     opacity: 50%;
     padding: 0px 2px;
-    transform: translateX(-50%);
-    animation: slidein 0.5s 1 linear normal forwards;
+    transform: translateY(30%);
+    animation: slidein 0.4s 1 ease-in forwards;
 }
 
 @keyframes slidein {
@@ -157,7 +157,7 @@ header>h1 {
 
     100% {
         opacity: 100%;
-        transform: translateX(0%);
+        transform: translateY(0%);
     }
 }
 
@@ -224,17 +224,24 @@ header strong {
 
 }
 
-.expbox .hr1 {
-    width: 100%;
+.expbox .hr1,
+.hr2 {
+    width: 0%;
     height: 0px;
-
+    animation: expndbar 1s linear 1 normal forwards;
+    border: 1px solid rgb(184, 183, 183);
 }
 
-.expbox .hr2 {
-    width: 100%;
-    height: 0px;
+@keyframes expndbar {
+    0% {
+        width: 0%;
+    }
 
+    100% {
+        width: 100%;
+    }
 }
+
 
 .BoxGird {
     width: 100%;
@@ -321,7 +328,7 @@ header strong {
     width: 100%;
     height: auto;
     display: grid;
-    gap: 14px;
+    row-gap: 12px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     flex-wrap: nowrap;
@@ -341,19 +348,20 @@ header strong {
 .Lowpdtbx .pdtoubx {
     padding: 6px 0px;
     border-radius: 12px;
-    width: 42vw;
+    width: 43vw;
     height: 25vh;
-    background: linear-gradient(rgb(243, 242, 242), rgb(250, 238, 238));
+    background: linear-gradient(#ebe8e8, #fae3d7);
     backdrop-filter: blur(1.5px);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+
 }
 
 .Lowpdtbx .wishlist {
     width: 100%;
     height: auto;
     text-align: left;
-    padding-left: 5px;
+    padding-left: 6px;
     z-index: 2;
 }
 
@@ -370,8 +378,8 @@ header strong {
 
 
 .pdtoubx .ptBx {
-    transform: translate(50%, 46%);
-    width: 20vw;
+    transform: translate(0%, 46%);
+    width: 19vw;
     height: 9vh;
     outline: none;
     position: absolute;
@@ -454,7 +462,7 @@ header strong {
     width: 100%;
     height: auto;
     position: absolute;
-    bottom: 4%;
+    bottom: 8%;
 
 }
 
@@ -580,11 +588,33 @@ footer .dts>p {
 
 /* Media Queries */
 
-@media (min-width:426px) {
+@media (min-width:425px) {
+
+    .navlist li {
+        font-size: 1.2rem;
+    }
+
+    .navlist img {
+        width: 3vw;
+        height: 3vh;
+
+    }
+
+    header img {
+        width: 200px;
+        height: 200px;
+    }
+
+    header>h1 {
+        width: 100%;
+        height: auto;
+        font-size: 2.8rem;
+        text-align: center;
+    }
 
     .BoxGird {
         width: 100%;
-        height: 56vh;
+        height: 50vh;
     }
 
     .BoxGird .boximg>h2 {
@@ -593,28 +623,18 @@ footer .dts>p {
 
     .Lowpdtbx .pdtoubx {
         width: 42vw;
-        height: 44vh;
+        height: 32vh;
     }
 
     .pdtoubx .ptBx {
-        width: 20vw;
-        height: 18vh;
-        transform: translate(50%, 50%);
-    }
-
-    .descpdt {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        bottom: 8%;
-
+        width: 18vw;
+        height: 10vh;
     }
 
     .descpdt h2 {
         font-family: var(--default-font);
-        font-size: 1.2rem;
-        font-weight: 420;
-        line-height: 16px;
+        font-size: 1rem;
+
     }
 
     .descpdt p {
@@ -635,4 +655,449 @@ footer .dts>p {
     .expbox p {
         font-size: 1.1rem;
     }
+
+    .infosec {
+        width: 100%;
+        height: 15vh;
+    }
+
+    .infosec h2,
+    .seclowrght h2 {
+        font-size: 1.1rem;
+    }
+
+    .seclowlf .connetion {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 7px 0px 6px 0px;
+    }
+
+    .connetion a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: black;
+        font-family: var(--default-font);
+        font-size: 0.7rem;
+    }
+
+
+    .seclowlf img {
+        width: 22px;
+        height: 22px;
+    }
+
+
+    .seclowrght p {
+        text-decoration: none;
+        color: black;
+        font-family: var(--default-font);
+        font-size: 0.7rem;
+    }
+
+    footer .dts {
+        padding: 8px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    footer .dts>h2 {
+        font-family: var(--default-font);
+        font-size: 0.8rem;
+    }
+
+    footer .dts>p {
+        font-weight: 400;
+        font-family: var(--default-font);
+        font-size: 0.7rem;
+    }
+
+}
+
+
+
+
+
+@media (min-width:768px) {
+
+
+    .navlist li {
+        font-size: 1.3rem;
+    }
+
+    .navlist img {
+        width: 4vw;
+        height: 4vh;
+    }
+
+    header img {
+        width: 220px;
+        height: 220px;
+    }
+
+    header>h1 {
+        width: 100%;
+        height: auto;
+        font-size: 2.9rem;
+        text-align: center;
+    }
+
+    .BoxGird {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .BoxGird .boximg>h2 {
+        font-size: 2rem;
+    }
+
+    .Lowpdtbx .pdtoubx {
+        width: 38vw;
+        height: 50vh;
+    }
+
+    .pdtoubx .ptBx {
+        width: 20vw;
+        height: 21vh;
+    }
+
+
+    .descpdt {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 8%;
+
+    }
+
+    .descpdt h2 {
+        font-family: var(--default-font);
+        font-size: 1.3rem;
+        font-weight: 420;
+        line-height: 16px;
+    }
+
+    .descpdt p {
+        font-size: 0.8rem;
+
+    }
+
+    .descpdt p:nth-child(3) {
+        font-size: 0.950rem;
+    }
+
+    .Lowpdtbx .wishlist img {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+    }
+
+    .expbox p {
+        font-size: 1.2rem;
+    }
+
+    .infosec {
+        width: 100%;
+        height: 18vh;
+    }
+
+    .infosec h2,
+    .seclowrght h2 {
+        font-size: 1.3rem;
+    }
+
+    .seclowlf .connetion {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 7px 0px 6px 0px;
+    }
+
+    .connetion a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+        color: black;
+        font-family: var(--default-font);
+        font-size: 0.8rem;
+    }
+
+
+    .seclowlf img {
+        width: 23px;
+        height: 23px;
+    }
+
+
+    .seclowrght p {
+        text-decoration: none;
+        color: black;
+        font-family: var(--default-font);
+        font-size: 0.8rem;
+    }
+
+    footer .dts {
+        padding: 8px 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    footer .dts>h2 {
+        font-family: var(--default-font);
+        font-size: 0.8rem;
+    }
+
+    footer .dts>p {
+        font-weight: 400;
+        font-family: var(--default-font);
+        font-size: 0.7rem;
+    }
+
+}
+
+
+
+
+
+
+@media(min-width:1024px) {
+
+
+    .navlist li {
+        font-size: 1.4rem;
+    }
+
+    .navlist img {
+        width: 4vw;
+        height: 5vh;
+    }
+
+    header img {
+        width: 240px;
+        height: 240px;
+    }
+
+    header>h1 {
+        width: 100%;
+        height: auto;
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    .BoxGird {
+        width: 100%;
+        height: 66vh;
+    }
+
+    .BoxGird .boximg>h2 {
+        font-size: 2.1rem;
+    }
+
+    .Lowpdtbx .pdtoubx {
+        width: 41vw;
+        height: 65vh;
+    }
+
+    .pdtoubx .ptBx {
+        width: 20vw;
+        height: 28vh;
+    }
+
+
+    .descpdt {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 8%;
+
+    }
+
+    .descpdt h2 {
+        font-family: var(--default-font);
+        font-size: 1.5rem;
+        font-weight: 420;
+        line-height: 16px;
+    }
+
+    .descpdt p {
+        font-size: 1rem;
+
+    }
+
+    .descpdt p:nth-child(3) {
+        font-size: 1.1rem;
+    }
+
+    .Lowpdtbx .wishlist img {
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+    }
+
+    .expbox p {
+        font-size: 1.3rem;
+    }
+
+    .infosec {
+        width: 100%;
+        height: 19vh;
+    }
+
+
+    .infosec h2,
+    .seclowrght h2 {
+        font-size: 1.4rem;
+    }
+
+    .connetion a {
+        font-size: 0.9rem;
+    }
+
+
+    .seclowlf img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .seclowrght p {
+        text-decoration: none;
+        color: black;
+        font-family: var(--default-font);
+        font-size: 0.9rem;
+    }
+
+    footer .dts>h2 {
+        font-family: var(--default-font);
+        font-size: 0.9rem;
+    }
+
+    footer .dts>p {
+        font-weight: 400;
+        font-family: var(--default-font);
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (min-width:1200px) {
+
+
+
+    .navlist img {
+        width: 2vw;
+        height: 4vh;
+    }
+
+    header img {
+        width: 260px;
+        height: 260px;
+    }
+
+    header>h1 {
+        width: 100%;
+        height: auto;
+        font-size: 3.2rem;
+        text-align: center;
+    }
+
+    .BoxGird {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .BoxGird .boximg>h2 {
+        font-size: 2.2rem;
+    }
+
+    .Lowpdtbx .pdtoubx {
+        width: 32vw;
+        height: 64vh;
+    }
+
+    .pdtoubx .ptBx {
+        width: 16vw;
+        height: 27vh;
+        transform: translate(0%, 50%);
+    }
+
+    .descpdt {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        bottom: 13%;
+
+    }
+
+
+    .descpdt h2 {
+        font-family: var(--default-font);
+        font-size: 1.8rem;
+        font-weight: 420;
+        padding-bottom: 12px;
+    }
+
+    .descpdt p {
+        font-size: 1.1rem;
+
+    }
+
+    .descpdt p:nth-child(3) {
+        font-size: 1.2rem;
+        transform: translateY(-8px);
+    }
+
+    .Lowpdtbx .wishlist img {
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+    }
+
+    .expbox p {
+        font-size: 1.4rem;
+    }
+
+    .infosec {
+        width: 100%;
+        height: 14vh;
+    }
+
+
+    .infosec h2,
+    .seclowrght h2 {
+        font-size: 1.6rem;
+    }
+
+    .connetion a {
+        font-size: 0.8rem;
+    }
+
+
+    .seclowlf img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .seclowrght p {
+        text-decoration: none;
+        color: black;
+        font-family: var(--default-font);
+        font-size: 0.8rem;
+    }
+
+    footer .dts>h2 {
+        font-family: var(--default-font);
+        font-size: 0.9rem;
+    }
+
+    footer .dts>p {
+        font-weight: 400;
+        font-family: var(--default-font);
+        font-size: 0.7rem;
+    }
+
 }
