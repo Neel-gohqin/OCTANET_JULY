@@ -39,6 +39,7 @@ main {
     width: 100%;
     height: auto;
     position: relative;
+    background-color: #f3d9cb;
 }
 
 .logbx {
@@ -49,14 +50,12 @@ main {
 
 .navlist {
     padding-top: 8px;
-    width: 100%;
+    width: auto;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: space-evenly;
     list-style: none;
-    background-color: #ffd2ba;
     backdrop-filter: blur(3.5px);
 }
 
@@ -69,7 +68,7 @@ main {
     font-weight: 400;
     margin-right: 5px;
     transition: transform 0.5s;
-
+    outline: none;
 }
 
 .navlist li:hover {
@@ -113,12 +112,12 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 10px 0px 45px 0px;
+    margin: 10px 0px 0px 0px;
 }
 
 header img {
-    width: 180px;
-    height: 180px;
+    width: 54vw;
+    height: 20vh;
     transform: scale(25%);
     z-index: -1;
     animation: scaleLogo 0.3s 1 linear normal forwards;
@@ -328,13 +327,15 @@ header strong {
     width: 100%;
     height: auto;
     display: grid;
-    row-gap: 12px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     flex-wrap: nowrap;
+    row-gap: 12px;
     justify-items: center;
+    justify-content: center;
     align-items: center;
     padding-top: 20px;
+
 }
 
 .Lowpdtbx a {
@@ -348,8 +349,8 @@ header strong {
 .Lowpdtbx .pdtoubx {
     padding: 6px 0px;
     border-radius: 12px;
-    width: 43vw;
-    height: 25vh;
+    width: 46vw;
+    height: 28vh;
     background: linear-gradient(#ebe8e8, #fae3d7);
     backdrop-filter: blur(1.5px);
     display: flex;
@@ -378,9 +379,9 @@ header strong {
 
 
 .pdtoubx .ptBx {
-    transform: translate(0%, 46%);
-    width: 19vw;
-    height: 9vh;
+    top: 22%;
+    width: 20vw;
+    height: 9.5vh;
     outline: none;
     position: absolute;
     border-radius: 50%;
@@ -394,8 +395,7 @@ header strong {
 .pdtoubx:active .ptBx {
 
     background-blend-mode: normal;
-    transition: background-blend-mode 3s ease, opacity 0.3s ease;
-    ;
+    transition: background-blend-mode 0.3s ease, opacity 0.3s ease;
     opacity: 100%;
 }
 
@@ -457,6 +457,24 @@ header strong {
     overflow: hidden;
 }
 
+.ptBx7 {
+    background-image: url(assets/detol.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    object-fit: cover;
+    outline: none;
+    overflow: hidden;
+}
+
+.ptBx8 {
+    background-image: url(assets/food5.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    object-fit: cover;
+    outline: none;
+    overflow: hidden;
+}
+
 
 .descpdt {
     width: 100%;
@@ -468,33 +486,33 @@ header strong {
 
 .descpdt h2 {
     font-family: var(--default-font);
-    font-size: 0.9rem;
+    font-size: 0.800rem;
     font-weight: 420;
     line-height: 13px;
 }
 
 .descpdt p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     font-weight: 395;
     font-family: var(--default-font);
 }
 
 .descpdt p:nth-child(3) {
-    font-size: 0.848rem;
+    font-size: 0.7rem;
     font-family: var(--default-font);
     font-weight: 420;
     color: #c99f88;
-    transform: translateY(-3px);
+    transform: translateY(-8px);
 }
 
 
 /* LOWER */
 .infosec {
     width: 100%;
-    height: 13vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    padding: 10px 10px 0px 10px;
+    padding: 10px 10px;
 }
 
 .infosec .seclowlf {
@@ -511,7 +529,7 @@ header strong {
 .seclowlf .connetion {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     padding: 7px 0px 6px 0px;
 }
 
@@ -523,6 +541,9 @@ header strong {
     color: black;
     font-family: var(--default-font);
     font-size: 0.6rem;
+    width: 21%;
+    height: auto;
+
 }
 
 .connetion p {
@@ -551,11 +572,13 @@ header strong {
     padding-top: 7px;
 }
 
-.seclowrght p {
+.seclowrght p,
+.seclowrght a {
     text-decoration: none;
     color: black;
     font-family: var(--default-font);
     font-size: 0.6rem;
+
 }
 
 footer {
@@ -566,7 +589,7 @@ footer {
 }
 
 footer .dts {
-    padding: 8px 10px;
+    padding: 4px 10px;
     width: 100%;
     height: auto;
 }
@@ -586,12 +609,13 @@ footer .dts>p {
 
 
 
+
 /* Media Queries */
 
 @media (min-width:425px) {
 
     .navlist li {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .navlist img {
@@ -600,16 +624,9 @@ footer .dts>p {
 
     }
 
-    header img {
-        width: 200px;
-        height: 200px;
-    }
-
     header>h1 {
-        width: 100%;
-        height: auto;
         font-size: 2.8rem;
-        text-align: center;
+
     }
 
     .BoxGird {
@@ -622,12 +639,12 @@ footer .dts>p {
     }
 
     .Lowpdtbx .pdtoubx {
-        width: 42vw;
-        height: 32vh;
+        width: 40vw;
+        height: 30vh;
     }
 
     .pdtoubx .ptBx {
-        width: 18vw;
+        width: 16vw;
         height: 10vh;
     }
 
@@ -656,29 +673,12 @@ footer .dts>p {
         font-size: 1.1rem;
     }
 
-    .infosec {
-        width: 100%;
-        height: 15vh;
-    }
-
     .infosec h2,
     .seclowrght h2 {
         font-size: 1.1rem;
     }
 
-    .seclowlf .connetion {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        padding: 7px 0px 6px 0px;
-    }
-
     .connetion a {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        color: black;
         font-family: var(--default-font);
         font-size: 0.7rem;
     }
@@ -691,27 +691,19 @@ footer .dts>p {
 
 
     .seclowrght p {
-        text-decoration: none;
-        color: black;
-        font-family: var(--default-font);
-        font-size: 0.7rem;
-    }
 
-    footer .dts {
-        padding: 8px 10px;
-        width: 100%;
-        height: auto;
+        font-size: 0.7rem;
     }
 
     footer .dts>h2 {
         font-family: var(--default-font);
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     footer .dts>p {
         font-weight: 400;
         font-family: var(--default-font);
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 
 }
@@ -724,11 +716,11 @@ footer .dts>p {
 
 
     .navlist li {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .navlist img {
-        width: 4vw;
+        width: 3vw;
         height: 4vh;
     }
 
@@ -740,8 +732,7 @@ footer .dts>p {
     header>h1 {
         width: 100%;
         height: auto;
-        font-size: 2.9rem;
-        text-align: center;
+        font-size: 2.8rem;
     }
 
     .BoxGird {
@@ -755,28 +746,18 @@ footer .dts>p {
 
     .Lowpdtbx .pdtoubx {
         width: 38vw;
-        height: 50vh;
+        height: 48vh;
     }
 
     .pdtoubx .ptBx {
         width: 20vw;
-        height: 21vh;
-    }
-
-
-    .descpdt {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        bottom: 8%;
-
+        height: 20vh;
     }
 
     .descpdt h2 {
         font-family: var(--default-font);
         font-size: 1.3rem;
-        font-weight: 420;
-        line-height: 16px;
+
     }
 
     .descpdt p {
@@ -798,52 +779,25 @@ footer .dts>p {
         font-size: 1.2rem;
     }
 
-    .infosec {
-        width: 100%;
-        height: 18vh;
-    }
-
     .infosec h2,
     .seclowrght h2 {
         font-size: 1.3rem;
     }
 
-    .seclowlf .connetion {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        padding: 7px 0px 6px 0px;
-    }
-
     .connetion a {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        text-decoration: none;
-        color: black;
-        font-family: var(--default-font);
         font-size: 0.8rem;
     }
-
 
     .seclowlf img {
         width: 23px;
         height: 23px;
     }
 
-
     .seclowrght p {
-        text-decoration: none;
-        color: black;
-        font-family: var(--default-font);
+
         font-size: 0.8rem;
     }
 
-    footer .dts {
-        padding: 8px 10px;
-        width: 100%;
-        height: auto;
-    }
 
     footer .dts>h2 {
         font-family: var(--default-font);
@@ -851,7 +805,7 @@ footer .dts>p {
     }
 
     footer .dts>p {
-        font-weight: 400;
+
         font-family: var(--default-font);
         font-size: 0.7rem;
     }
@@ -867,24 +821,12 @@ footer .dts>p {
 
 
     .navlist li {
-        font-size: 1.4rem;
+        font-size: 0.9rem;
     }
 
     .navlist img {
-        width: 4vw;
-        height: 5vh;
-    }
-
-    header img {
-        width: 240px;
-        height: 240px;
-    }
-
-    header>h1 {
-        width: 100%;
-        height: auto;
-        font-size: 3.2rem;
-        text-align: center;
+        width: 2vw;
+        height: 4vh;
     }
 
     .BoxGird {
@@ -893,116 +835,94 @@ footer .dts>p {
     }
 
     .BoxGird .boximg>h2 {
-        font-size: 2.1rem;
+        font-size: 1.8rem;
+    }
+
+    .lowersec .Lowpdtbx {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 90px);
+        grid-template-rows: repeat(2, 220px);
+        gap: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 20px;
     }
 
     .Lowpdtbx .pdtoubx {
-        width: 41vw;
-        height: 65vh;
-    }
-
-    .pdtoubx .ptBx {
-        width: 20vw;
+        width: 13vw;
         height: 28vh;
     }
 
-
-    .descpdt {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        bottom: 8%;
-
+    .pdtoubx .ptBx {
+        width: 4.5vw;
+        height: 8vh;
     }
 
     .descpdt h2 {
         font-family: var(--default-font);
-        font-size: 1.5rem;
-        font-weight: 420;
-        line-height: 16px;
+        font-size: 0.8rem;
     }
 
     .descpdt p {
-        font-size: 1rem;
+        font-size: 0.6rem;
 
     }
 
     .descpdt p:nth-child(3) {
-        font-size: 1.1rem;
+        font-size: 0.7rem;
     }
 
     .Lowpdtbx .wishlist img {
         cursor: pointer;
-        width: 35px;
-        height: 35px;
+        width: 24px;
+        height: 24px;
     }
 
     .expbox p {
-        font-size: 1.3rem;
-    }
-
-    .infosec {
-        width: 100%;
-        height: 19vh;
+        font-size: 1.2rem;
     }
 
 
     .infosec h2,
     .seclowrght h2 {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .connetion a {
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 
 
     .seclowlf img {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
 
-
     .seclowrght p {
-        text-decoration: none;
-        color: black;
-        font-family: var(--default-font);
-        font-size: 0.9rem;
+        font-size: 0.6rem;
     }
 
     footer .dts>h2 {
         font-family: var(--default-font);
-        font-size: 0.9rem;
-    }
-
-    footer .dts>p {
-        font-weight: 400;
-        font-family: var(--default-font);
         font-size: 0.7rem;
     }
 
+    footer .dts>p {
+        font-family: var(--default-font);
+        font-size: 0.5rem;
+    }
 }
+
+
 
 @media (min-width:1200px) {
 
-
-
-    .navlist img {
-        width: 2vw;
-        height: 4vh;
+    .navlist li {
+        font-size: 1.2rem;
     }
 
-    header img {
-        width: 260px;
-        height: 260px;
-    }
-
-    header>h1 {
-        width: 100%;
-        height: auto;
-        font-size: 3.2rem;
-        text-align: center;
-    }
 
     .BoxGird {
         width: 100%;
@@ -1013,56 +933,51 @@ footer .dts>p {
         font-size: 2.2rem;
     }
 
+    .lowersec .Lowpdtbx {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 180px);
+        grid-template-rows: repeat(2, 280px);
+        gap: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 20px;
+    }
+
     .Lowpdtbx .pdtoubx {
-        width: 32vw;
-        height: 64vh;
+        width: 14vw;
+        height: 35vh;
     }
 
     .pdtoubx .ptBx {
-        width: 16vw;
-        height: 27vh;
-        transform: translate(0%, 50%);
+        width: 6vw;
+        height: 11.5vh;
     }
-
-    .descpdt {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        bottom: 13%;
-
-    }
-
 
     .descpdt h2 {
         font-family: var(--default-font);
-        font-size: 1.8rem;
-        font-weight: 420;
-        padding-bottom: 12px;
+        font-size: 1rem;
     }
 
     .descpdt p {
-        font-size: 1.1rem;
+        font-size: 0.8rem;
 
     }
 
     .descpdt p:nth-child(3) {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         transform: translateY(-8px);
     }
 
     .Lowpdtbx .wishlist img {
         cursor: pointer;
-        width: 46px;
-        height: 46px;
+        width: 30px;
+        height: 30px;
     }
 
     .expbox p {
-        font-size: 1.4rem;
-    }
-
-    .infosec {
-        width: 100%;
-        height: 14vh;
+        font-size: 1.3rem;
     }
 
 
@@ -1083,8 +998,6 @@ footer .dts>p {
 
 
     .seclowrght p {
-        text-decoration: none;
-        color: black;
         font-family: var(--default-font);
         font-size: 0.8rem;
     }
@@ -1100,4 +1013,31 @@ footer .dts>p {
         font-size: 0.7rem;
     }
 
+}
+
+
+
+@media (min-width:1400px) {
+
+    .lowersec .Lowpdtbx {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 180px);
+        grid-template-rows: repeat(2, 350px);
+        gap: 20px;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .Lowpdtbx .pdtoubx {
+        width: 14vw;
+        height: 34vh;
+    }
+
+    .pdtoubx .ptBx {
+        width: 5.5vw;
+        height: 10vh;
+    }
 }
